@@ -1,3 +1,31 @@
+body{
+    background-color: #F9FFFA;
+}
+
 .titleText {
     font-family: 'Text Me One', sans-serif;
+}
+
+.header {
+    background-color: #277491;
+    color: #F9FFFA;
+    padding: 10px;
+}
+
+.header > *{
+    font-size: 35pt;
+    margin: auto;
+}
+
+.subheader {
+    background-color: #62A2BA;
+    color: #F9FFFA;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.subheader > *{
+    font-size: 22pt;
+    margin: auto;
 }

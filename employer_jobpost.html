@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Post a Job</title>
+    <meta name="class" content="COMP 2800">
+    <meta name="team" content="24">
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!------------------------------------------>
+    <!-- CSS: Bootstrap, Firebase, other API  -->
+    <!------------------------------------------>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
+    
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="styles/employer_post.css">
+
+</head>
+
+<body>
+    <!------------------->
+    <!--  HTML Section -->
+    <!------------------->
+
+    <!-- Header -->
+    <div class="header">
+        <h2 class="titleText">IMMPLOYED</h2>
+    </div>
+
+    <!-- Current User Bar -->
+    <div class="subheader">
+        <h4 class="titleText">EMPLOYER</h4>
+    </div>
+
+    <!-- Title -->
+    <div id="mainTitle">
+        <h2 class="titleText">NEW JOB POSTING</h2>
+    </div>
+
+    <!-- Input Form -->
+    <form id="newPostForm">
+
+        <!-- Input Job Title -->
+        <h4 class="titleText">Job Title</h4>
+        <input type="text" class="form-control" placeholder="Title Goes Here">
+
+        <!-- Input Job Location -->
+        <h4 class="titleText">Location of Job</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Street Address">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputCity" placeholder="City">
+            <input type="text" class="form-control" id="inputProvince" placeholder="Province">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputPostalCode" placeholder="Postal Code">
+        </div>
+
+        <!-- Input Job Pay -->
+        <h4 class="titleText">Pay</h4>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Pay in CAD">
+        </div>
+
+        <!-- Pay Negotiable Buttons -->
+        <h4 class="titleText">Pay is Negotiable</h4>
+        <div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" name="payNegotiable" id="payNegotiableYes">
+                <label class="custom-control-label" for="payNegotiableYes">Yes</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" name="payNegotiable" id="payNegotiableNo" checked>
+                <label class="custom-control-label" for="payNegotiableNo">No</label>
+            </div>
+        </div>
+
+        <!-- Description of Pay -->
+        <h4 class="titleText">Decription of Job</h4>
+        <h5 class="titleText">(Experience, requirements, etc.)</h5>
+        <textarea placeholder="Description goes here."></textarea>
+
+    </form>
+
+    <!-- Input buttons -->
+    <div id="finalButtons">
+        <button class="titleText">BACK</button>
+        <button class="titleText" type="submit">NEXT</button>
+    </div>
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, other API's    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <!----------------------------------------------->
+    <!-- JS files: Your own JavaScripts go here    -->
+    <!----------------------------------------------->
+
+
+</body>
+
+</html>
