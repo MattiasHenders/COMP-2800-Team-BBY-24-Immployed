@@ -2,7 +2,7 @@ body{
     background-color: #F9FFFA;
 }
 
-.titleText {
+h1, h2, h3, h4, h5, h6{
     font-family: 'Text Me One', sans-serif;
 }
 
