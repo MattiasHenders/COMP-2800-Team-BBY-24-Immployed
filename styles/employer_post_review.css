@@ -12,12 +12,17 @@
     font-size: 28pt;
 }
 
-#newPostForm {
+#reviewContainer {
     margin: 20px;
 }
 
-#newPostForm>* {
+#reviewContainer>* {
     margin-bottom: 10px;
+}
+
+#titleReview, #addressReview, #cityReview, #provinceReview, #postalCodeReview, #payReview, #payNegotiableReview, #descriptionReview {
+    background-color: #B8D1DF;
+    color: #20124D;
 }
 
 #locationEntry {
@@ -29,22 +34,6 @@
 
 }
 
-#address {
-    grid-area: address;
-}
-
-#city {
-    grid-area: city;
-}
-
-#province {
-    grid-area: province;
-}
-
-#postalCode {
-    grid-area: postalCode;
-}
-
 #paymentSection {
     display: flex;
     flex-direction: row;
@@ -53,11 +42,6 @@
 
 #payAmount {
     margin-right: 10px;
-}
-
-textarea {
-    width: 100%;
-    height: 100%;
 }
 
 #finalButtons {
