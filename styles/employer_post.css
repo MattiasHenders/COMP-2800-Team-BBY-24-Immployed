@@ -1,0 +1,42 @@
+#newPostForm {
+    color: #20124D
+}
+
+#mainTitle {
+    background-color: #D6F4FF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#mainTitle > * {
+    font-size: 28pt;
+}
+
+#newPostForm {
+    margin: 20px;
+}
+
+#newPostForm > *{
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+}
+
+#finalButtons{
+ margin-bottom: 20px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+}
+
+#finalButtons > * {
+    font-size: 26pt;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #277491;
+    color: #F9FFFA;
+}
