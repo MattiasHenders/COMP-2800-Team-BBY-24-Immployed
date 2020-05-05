@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-        <!------------------------>
+    
+    <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
@@ -63,7 +64,7 @@
 
         <!-- Input Job Title -->
         <h4>Job Title</h4>
-        <input type="text" class="form-control" placeholder="Title Goes Here">
+        <input id="titleInput" type="text" class="form-control" placeholder="Title Goes Here">
         <br>
 
         <!-- Input Job Location -->
@@ -93,7 +94,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">$</span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Pay in CAD">
+                    <input type="text" id="payAmountInput" class="form-control" placeholder="Pay in CAD">
                 </div>
             </div>
 
@@ -118,14 +119,14 @@
         <!-- Description of Job -->
         <h4>Decription of Job</h4>
         <h5>(Experience, requirements, etc.)</h5>
-        <textarea placeholder="Description goes here."></textarea>
+        <textarea id="descriptionInput" placeholder="Description goes here."></textarea>
 
     </form>
 
     <!-- Input buttons -->
     <div id="finalButtons">
-        <button>BACK</button>
-        <button type="submit">NEXT</button>
+        <button id="employerHomeButton">HOME</button>
+        <button id="jobPostNextButton" type="submit">NEXT</button>
     </div>
 
     <!----------------------------------------------->
@@ -149,7 +150,7 @@
     <!----------------------------------------------->
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
-
+    <script src="scripts/employer_jobpost.js"></script>
 
 </body>
 

@@ -22,6 +22,7 @@
 
 #titleReview, #addressReview, #cityReview, #provinceReview, #postalCodeReview, #payReview, #payNegotiableReview, #descriptionReview {
     background-color: #B8D1DF;
+    padding: 8px;
     color: #20124D;
 }
 
@@ -31,13 +32,16 @@
         "address address"
         "city province"
         "postalCode postalCode";
-
 }
 
 #paymentSection {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+#payNegotiable {
+    margin-left: 10px;
 }
 
 #payAmount {
