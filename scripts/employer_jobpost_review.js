@@ -44,8 +44,7 @@ function employerHomePage() {
  */
 function submitPost() {
 
-    // *** UNCOMMENT WHEN EMPLOYER LOGIN IN IOMPLEMENTED ***
-    //let userID = db.collection("users/").doc(user.uid);
+    let userID = db.collection("users/").doc(user.uid);
 
     //Post to be added to job_posts collection
     db.collection("job_posts").add({
@@ -57,8 +56,7 @@ function submitPost() {
             payAmount: payAmount,
             payNegotiable: payNegotiable,
             description: description,
-            // *** UNCOMMENT WHEN EMPLOYER LOGIN IN IOMPLEMENTED ***
-            //ownerOfPost: userID
+            ownerOfPost: userID
         })
         .then(function () {
             employerHomePage();
