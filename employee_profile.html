@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Employee Profile</title>
+    <meta name="class" content="COMP 2800">
+    <meta name="team" content="24">
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!------------------------------------------>
+    <!-- CSS: Bootstrap, Firebase, other API  -->
+    <!------------------------------------------>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+    <link rel="icon"  type="image/png" href="images/favicon_logo.png">
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
+
+    <!------------------------------------------>
+    <!--           Bootstrap Icons            -->
+    <!------------------------------------------>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+    crossorigin="anonymous">
+
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="styles/employee_profile.css">
+
+    <!------------>
+    <!-- jQuery -->
+    <!------------>
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'></script>
+    
+</head>
+
+<body>
+    <!------------------->
+    <!--  HTML Section -->
+    <!------------------->
+
+    <div class="completeHeader">
+        <div class="header">
+            <h2>IMMPLOYED</h2>
+        </div>
+        <div class="subheader">
+            <h4>PROFILE</h4>
+        </div>
+    </div>
+
+    <button id="editProfile">Click to Edit</button>
+
+    <div id="profileComponents">
+        <!-- Picture of Profile-->
+        <img id = "profilePic" class="avatar">
+        
+        <!-- Input for new profile picture -->
+        <form>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="fileSelect" accept="image/*"/>
+              <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+        </form>
+        
+
+        <!-- Name of Profile -->
+        <div id="name">
+            <h2></h2>
+        </div>
+
+        <div class="textBox">
+            <p id="intro"></p>
+        </div>
+
+        <h2>Experience</h2>
+        <div class="textBox">
+            <p id="experience"></p>
+        </div>
+
+        <h2>Skills</h2>
+        <div class="textBox">
+            <p id="skills"></p>
+        </div>
+
+        <h2>Interests</h2>
+        <div class="textBox">
+            <p id="interests"></p>
+        </div>
+
+        <h2>Contacts</h2>
+        <label>Email</label>    
+        <div class="textBox"><p id = "email"></p></div> <br>
+
+        <label>Website</label>  
+        <div class="textBox"><p id = "website"></p></div> <br>
+
+        <label>Phone</label>    
+        <div class="textBox"><p id = "phone"></p></div><br>
+            
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+                <p>info placeholder thing</p>
+       </footer>
+       <button id="saveChanges">Save Changes</button>
+    </div>
+
+    <div class="alert alert-success" id="success-alert">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>Success!</strong>
+        Changes saved.
+    </div>
+    <!----------------------------------------------->
+    <!--   JS: Boostrap, Firebase, other API's     -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <!----------------------------------------------->
+    <!--            Our own JS files               --> 
+    <!----------------------------------------------->
+    <script src="scripts/immployed_firebase_api.js"></script> 
+    <script src="scripts/employee_profile.js"></script> 
+</body>

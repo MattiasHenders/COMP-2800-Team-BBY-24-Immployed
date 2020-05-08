@@ -3,31 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Immployed</title>
+    <title>Post a Job</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
-    <script type="text/javascript" src="scripts/index.js"></script>
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
     <!----------------------------------------------->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!------------------------------------------>
-    <!-- CSS: Bootstrap, Firebase, other API  -->
-    <!------------------------------------------>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="//firebase/7.14.2/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="//firebase/7.14.2/firebase-analytics.js"></script>
-
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <!------------------------------------------------->
+    <!-- CSS: Bootstrap, Icons, Firebase, other API  -->
+    <!------------------------------------------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="styles/master.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
     <link rel="icon"  type="image/png" href="images/favicon_logo.png">
@@ -37,7 +28,7 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="styles/index.css"> 
+    <link rel="stylesheet" href="styles/employer_post_review.css">
 
 </head>
 
@@ -46,32 +37,67 @@
     <!--  HTML Section -->
     <!------------------->
 
-    <!-- Main Title -->
-    <div id="mainTitle">
-        <h1>IMMPLOYED</h1>
-    </div>
+    <!-- Header -->
+    <div class="header">
+        <h2>IMMPLOYED</h2>
 
-    <!-- Slogan -->
-    <div id="slogan">
-        <h3>Employing the Immune</h3>
-    </div>
-
-    <!-- Button Div -->
-    <div id="buttonDiv">
-        <!-- Button: Employer -->
-        <div id="pageButtons">
-            <button onclick="employerPage()" id="employerPage" type="submit">EMPLOYER</button>
+        <!-- Current User Bar -->
+        <div class="subheader">
+            <h4>EMPLOYER</h4>
         </div>
-        <!-- Button: Employee -->
-        <div id="pageButtons">
-            <button onclick="employeePage()" id="employeePage">EMPLOYEE</button>
-        </div>   
-        <!-- Button: About Us -->
-        <div id="pageButtons">
-            <button onclick="aboutUs()" id="aboutUs">ABOUT US</button>
-        </div> 
     </div>
-                 
+
+    <!-- Title -->
+    <div id="mainTitle">
+        <h2>REVIEW POSTING</h2>
+    </div>
+
+    <!-- Review Container -->
+    <div id="reviewContainer">
+
+        <!-- Input Job Title -->
+        <h4>Job Title</h4>
+        <h4 id="titleReview"></h4>
+        <br>
+
+        <!-- Input Job Location -->
+        <h4>Location of Job</h4>
+        <div id="locationReview">
+            <h4 id="addressReview"></h4>
+            <h4 id="cityReview"></h4>
+            <h4 id="provinceReview"></h4>
+            <h4 id="postalCodeReview"></h4>
+        </div>
+        <br>
+
+        <!-- Payment Section -->
+        <div id="paymentSection">
+            <!-- Input Job Pay -->
+            <div>
+                <h4>Pay</h4>
+                <h4 id="payReview"></h4>
+            </div>
+
+            <!-- Pay Negotiable Buttons -->
+            <div id="payNegotiable">
+                <h4>Pay is Negotiable</h4>
+                <h4 id="payNegotiableReview"></h4>
+            </div>
+        </div>
+        <br>
+
+        <!-- Description of Job -->
+        <h4>Decription of Job</h4>
+        <h5>(Experience, requirements, etc.)</h5>
+        <p id="descriptionReview"></p>
+
+    </div>
+
+    <!-- Input buttons -->
+    <div id="finalButtons">
+        <button id="backButton">BACK</button>
+        <button id="submitButton" type="submit">SUBMIT</button>
+    </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
@@ -85,16 +111,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="scripts/immployed_firebase_api.js"></script>
 
     <!----------------------------------------------->
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
-
+    <script src="scripts/employer_jobpost_review.js"></script>
 
 </body>
 

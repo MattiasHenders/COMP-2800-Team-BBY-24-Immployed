@@ -1,0 +1,128 @@
+#newPostForm {
+    color: #20124D
+}
+
+#mainTitle {
+    background-color: #D6F4FF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#mainTitle>* {
+    font-size: 28pt;
+}
+
+#reviewContainer {
+    margin: 20px;
+}
+
+#reviewContainer>* {
+    margin-bottom: 10px;
+}
+
+#titleReview, #addressReview, #cityReview, #provinceReview, #postalCodeReview, #payReview, #payNegotiableReview, #descriptionReview {
+    background-color: #B8D1DF;
+    padding: 8px;
+    color: #20124D;
+}
+
+#locationEntry {
+    display: grid;
+    grid-template-areas:
+        "address address"
+        "city province"
+        "postalCode postalCode";
+}
+
+#paymentSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#payNegotiable {
+    margin-left: 10px;
+}
+
+#payAmount {
+    margin-right: 10px;
+}
+
+#finalButtons {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#finalButtons>* {
+    font-size: 26pt;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #277491;
+    color: #F9FFFA;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+    #paymentSection {
+        justify-content: flex-start;
+    }
+
+    #payAmount {
+        margin-right: 50px;
+    }
+
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    #paymentSection {
+        justify-content: flex-start;
+    }
+
+    #payAmount {
+        margin-right: 50px;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #paymentSection {
+        justify-content: flex-start;
+    }
+
+    #payAmount {
+        margin-right: 50px;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {}
