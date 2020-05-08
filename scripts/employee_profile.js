@@ -53,7 +53,7 @@ function populateProfile(){
         website.innerHTML = profileMap["website"]
         phone.innerHTML = profileMap["phone"]
 
-        $("#profileComponents > p").each(function(){
+        $("#profileComponents > div > p").each(function(){
             if($(this).text() == "" || $(this).text() == "undefined") {
                 $(this).text("Nothing entered yet!");
             }
