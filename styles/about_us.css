@@ -1,0 +1,82 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+
+  .para{
+    text-align: center;
+  }
+
+  .slogan{
+    font-size: 25px;
+  }
+
+  .logo{
+    display: block;
+    text-align: center;
+    background-color: #277491 ;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    border-color: black;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #277491  ;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #277491;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #175369;
+  }
+
+  .ourteam{
+    background-color: #B4E4FF;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
