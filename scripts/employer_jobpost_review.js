@@ -36,7 +36,7 @@ function jobPostPage() {
  */
 function employerHomePage() {
     localStorage.clear();
-    window.location.href = "employer_home.html";
+    window.location.href = "employer_homepage.html";
 }
 
 /**

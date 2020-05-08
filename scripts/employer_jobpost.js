@@ -32,10 +32,10 @@ function jobReviewPage(){
 }
 
 /**
- * Changed to employer home page
+ * Change to employer home page
  */
 function employerHomePage(){
-    window.location.href = "employer_home.html";
+    window.location.href = "employer_homepage.html";
 }
 
 /**
