@@ -104,24 +104,25 @@ $("#saveChanges").click(function() {
         }
     });
     if (imageUploaded == true) {
-
+        const uploadTask = storageRef.child('profilePictures/' + userId + '/profilePic.png').put(selectedFile); 
+        uploadTask.on('state_changed', (snapshot) => {
+            // Observe state change events such as progress, pause, and resume
+        }, (error) => {
+            // Handle unsuccessful uploads
+            console.log(error);
+        }, () => {
+            // Do something once upload is complete
+            console.log('success');
+            imageUploaded = false;
+        });
     }
     
-    const uploadTask = storageRef.child('profilePictures/' + userId + '/profilePic.png').put(selectedFile); 
-    uploadTask.on('state_changed', (snapshot) => {
-        // Observe state change events such as progress, pause, and resume
-    }, (error) => {
-        // Handle unsuccessful uploads
-        console.log(error);
-    }, () => {
-        // Do something once upload is complete
-        console.log('success');
+    
         $('#success-alert').toggle();
         setTimeout(function() {
             $(".alert").alert('close');
         }, 2000);
-    });
-    imageUploaded = false;
+    
 });
 
 //Changes the picture to the newly updated picture.
