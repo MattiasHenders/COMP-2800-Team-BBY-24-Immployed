@@ -94,13 +94,12 @@
                         db.collection("employee_users").doc(user.uid).set({
                                 name: user.displayName,
                                 email: user.email,
-                                [profile_info]: {}
+                                [profile_info]: {
+                                    name: user.displayName
+                                }
                             }).then(function () {
-                                db.collection("user_" + user.displayName).doc("placeholder").set({
-                                    placeholder: "placeholder"
-                                })
                                 console.log("New user added to firestore");
-                                window.location.assign("employee_profile.html");
+                                window.location.assign("toProfiles.html");
                             })
                             .catch(function (error) {
                                 console.log("Error adding new user: " + error);
@@ -122,7 +121,8 @@
             //------------------------------------
             // ------NEED TO FIX THIS!!!!---------
             //------------------------------------
-            signInSuccessUrl: 'employee_profile.html',
+            signInSuccessUrl: "toProfiles.html",
+
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
