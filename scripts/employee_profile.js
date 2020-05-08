@@ -97,7 +97,7 @@ $("#saveChanges").click(function() {
             bio: $('#intro').text(),
             experience: $('#experience').text(),
             skills: $('#skills').text(),
-            experience: $('#interests').text(), 
+            interests: $('#interests').text(), 
             email: $('#email').text(),
             website: $('#website').text(),
             phone: $('#phone').text() 
@@ -116,8 +116,6 @@ $("#saveChanges").click(function() {
             imageUploaded = false;
         });
     }
-    
-    
         $('#success-alert').toggle();
         setTimeout(function() {
             $(".alert").alert('close');

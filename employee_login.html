@@ -94,8 +94,14 @@
                         db.collection("employee_users").doc(user.uid).set({
                                 name: user.displayName,
                                 email: user.email,
-                                [profile_info]: {
-                                    name: user.displayName
+                                profile_info: {
+                                    bio: "",
+                                    experience: "",
+                                    skills: "",
+                                    interests: "", 
+                                    email: "",
+                                    website: "",
+                                    phone: ""
                                 }
                             }).then(function () {
                                 console.log("New user added to firestore");
