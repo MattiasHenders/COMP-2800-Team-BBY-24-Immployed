@@ -10,8 +10,11 @@
     }
 
     function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 
-// 
+// Redirecting to creating a new post
+    function createNew(){
+        window.location.href = "employer_jobpost.html";
+    }
