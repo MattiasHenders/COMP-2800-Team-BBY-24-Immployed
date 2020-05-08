@@ -44,7 +44,7 @@ function employerHomePage() {
  */
 function submitPost() {
 
-    let userID = db.collection("users/").doc(user.uid);
+    //let userID = db.collection("users/").doc(user.uid);
 
     //Post to be added to job_posts collection
     db.collection("job_posts").add({
@@ -56,7 +56,7 @@ function submitPost() {
             payAmount: payAmount,
             payNegotiable: payNegotiable,
             description: description,
-            ownerOfPost: userID
+            //ownerOfPost: userID
         })
         .then(function () {
             employerHomePage();
