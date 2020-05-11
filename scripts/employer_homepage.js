@@ -1,5 +1,6 @@
 // Scroll to the top feature
     mybutton = document.getElementById("top");
+    document.getElementById("employerProfileButton").onclick = employerHomePage;
 
     function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 10) {
@@ -18,3 +19,11 @@
     function createNew(){
         window.location.href = "employer_jobpost.html";
     }
+
+
+/**
+ * Change to employer profile page
+ */
+function employerHomePage(){
+    window.location.href = "employer_profile.html";
+}

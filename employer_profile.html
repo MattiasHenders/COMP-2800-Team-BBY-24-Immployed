@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Employee Profile</title>
+    <title>Employer Profile</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
 
@@ -34,7 +34,7 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="styles/employee_profile.css">
+    <link rel="stylesheet" href="styles/employer_profile.css">
 
     <!------------>
     <!-- jQuery -->
@@ -53,7 +53,7 @@
             <h2>IMMPLOYED</h2>
         </div>
         <div class="subheader">
-            <h4>EMPLOYEE PROFILE</h4>
+            <h4>EMPLOYER PROFILE</h4>
         </div>
     </div>
 
@@ -61,7 +61,7 @@
 
     <div id="profileComponents">
         <!-- Picture of Profile-->
-        <img id = "profilePic" class="avatar">
+        <img id = "logoPic" class="avatar">
         
         <!-- Input for new profile picture -->
         <form>
@@ -76,23 +76,9 @@
             <h2></h2>
         </div>
 
+        <h2>Company Description</h2>
         <div class="textBox">
-            <p id="intro"></p>
-        </div>
-
-        <h2>Experience</h2>
-        <div class="textBox">
-            <p id="experience"></p>
-        </div>
-
-        <h2>Skills</h2>
-        <div class="textBox">
-            <p id="skills"></p>
-        </div>
-
-        <h2>Interests</h2>
-        <div class="textBox">
-            <p id="interests"></p>
+            <p id="description"></p>
         </div>
 
         <h2>Contacts</h2>
@@ -138,5 +124,5 @@
     <!--            Our own JS files               --> 
     <!----------------------------------------------->
     <script src="scripts/immployed_firebase_api.js"></script> 
-    <script src="scripts/employee_profile.js"></script> 
+    <script src="scripts/employer_profile.js"></script> 
 </body>
