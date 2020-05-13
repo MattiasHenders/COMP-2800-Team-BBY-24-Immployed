@@ -30,7 +30,7 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="styles/employer_all_posts.css">
+    <link rel="stylesheet" href="styles/employer_specific_post.css">
 
 </head>
 
@@ -51,13 +51,13 @@
 
     <!-- Title -->
     <div id="mainTitle">
-        <h3>YOUR RECENT POSTINGS</h3>
+        <h3 id=""></h3>
     </div>
 
-        <!-- Postings -->
-        <div id="myPostings">
-        </div>  
-        
+    <hr>
+
+    <!-- Users who've applied go below -->
+
         <!-- Button: GO TO THE TOP -->
         <div id="lastButton">
             <button onclick="topFunction()" id="top">BACK TO THE TOP</button>
@@ -85,7 +85,7 @@
     <!--            Our own JS files               --> 
     <!----------------------------------------------->
     <script src="scripts/immployed_firebase_api.js"></script> 
-    <script src="scripts/employer_all_posts.js"></script>
+    <script src="scripts/employer_specific_post.js"></script>
 
 </body>
 

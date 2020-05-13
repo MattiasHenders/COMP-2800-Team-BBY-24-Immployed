@@ -1,39 +1,62 @@
 #recentPostings {
-    padding: 10px;
-    margin: 20px;
+  padding: 10px;
+  margin: 20px;
 }
 
 #paragraph {
-    float: left;
-    margin-left: 10px;
-    grid-area: p;
-}
-
-#companyLogo {
-    grid-area: i;
-    width: 150px;
+  margin-left: 10px;
 }
 
 #title {
-    margin-left:10px;
-    grid-area: t;
+  margin-left: 10px;
+}
+
+#mainTitle {
+  margin: 20px;
+  font-size: 32pt;
+}
+
+#mainTitle>h3 {
+  font-size: 32pt;
+}
+
+#myPostings {
+  display: grid;
+  grid-template-columns: repeat(1, 85vw);
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px 20px;
+}
+
+#myPostings>div {
+  padding: 10px;
+  color: #F9FFFA;
+  border: 2px solid #277491;
+  background-color: #62A2BA;
+}
+
+#myPostings>div>button {
+  font-size: 18pt;
+  color: #F9FFFA;
+  border: none;
+  background-color: #277491;
 }
 
 #lastButton {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 #lastButton>* {
-    font-size: 26pt;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 0px;
-    background-color: #277491;
-    color: #F9FFFA;
+  font-size: 26pt;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 0px;
+  background-color: #277491;
+  color: #F9FFFA;
 }
 
 /* 
@@ -43,8 +66,9 @@
 
 @media (min-width: 1281px) {
 
-
-
+  #myPostings {
+    grid-template-columns: repeat(4, 22vw);
+  }
 }
 
 /* 
@@ -53,7 +77,9 @@
   */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-
+  #myPostings {
+    grid-template-columns: repeat(4, 22vw);
+  }
 }
 
 /* 
@@ -63,18 +89,29 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+  #myPostings {
+    grid-template-columns: repeat(2, 45vw);
+  }
 }
 
 /* 
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
   */
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #myPostings {
+    grid-template-columns: repeat(2, 45vw);
+  }
+}
 
 /* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
   */
 
-@media (min-width: 481px) and (max-width: 767px) {}
+@media (min-width: 481px) and (max-width: 767px) {
+
+  #myPostings {
+    grid-template-columns: repeat(2, 45vw);
+  }
+}
