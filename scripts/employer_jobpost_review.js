@@ -8,6 +8,17 @@ let payAmount = localStorage.getItem(5);
 let payNegotiable = localStorage.getItem(6);
 let description = localStorage.getItem(7);
 
+let profile;
+
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        profile = String(user.uid);
+        console.log(profile);
+    }else {
+        console.log("Error, not logged in");
+    }
+});
+
 /**
  * Sets the page with the info previously provided
  */
@@ -22,6 +33,8 @@ function setPage() {
     document.getElementById("descriptionReview").innerHTML = description;
     document.getElementById("backButton").onclick = jobPostPage;
     document.getElementById("submitButton").onclick = submitPost;
+
+    
 }
 
 /**
@@ -44,8 +57,6 @@ function employerHomePage() {
  */
 function submitPost() {
 
-    let userID = db.collection("employer_users").doc(user.uid);
-
     //Post to be added to job_posts collection
     db.collection("job_posts").add({
             title: title,
@@ -56,7 +67,7 @@ function submitPost() {
             payAmount: payAmount,
             payNegotiable: payNegotiable,
             description: description,
-            ownerOfPost: userID
+            ownerOfPost: profile
         })
         .then(function () {
             employerHomePage();
