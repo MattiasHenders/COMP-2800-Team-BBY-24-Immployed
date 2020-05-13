@@ -1,8 +1,13 @@
 // Scroll to the top feature
 //mybutton = document.getElementById("top");
-$('document').ready(function () {
+window.onload = function() {
     document.getElementById("employerProfileButton").onclick = employerProfilePage;
-});
+
+    firebase.auth().onAuthStateChanged((user) => {
+
+            console.log(user.uid);
+    });
+};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 10) {
