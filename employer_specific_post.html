@@ -23,10 +23,9 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
-    <link rel="icon"  type="image/png" href="images/favicon_logo.png">
+    <link rel="icon" type="image/png" href="images/favicon_logo.png">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-    
-    <!------------------------>
+        <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
@@ -54,13 +53,39 @@
         <h3 id="postTitle"></h3>
     </div>
 
+    <div id="postWrapper">
+        <p id="postDescription"></p>
+        <div id="mainPost">
+            <div id="location">
+                <h4 style="text-decoration: underline;">Location</h4>
+                <h5 id="postAddress"></h5>
+                <h5 id="postCity"></h5>
+                <h5 id="postProvince"></h5>
+                <h5 id="postPostalCode"></h5>
+            </div>
+            <div id="pay">
+                <h4 style="text-decoration: underline;">Pay Amount</h4>
+                <h5 id="payAmount"></h5>
+                <h4 style="text-decoration: underline;">Pay Negotiable</h4>
+                <h5 id="payNegotiable"></h5>
+            </div>
+        </div>
+    </div>
+
     <hr>
     <!-- Users who've applied go below -->
+    <div id="applicantTitle">
+        <h2>Applicants</h2>
+    </div>
 
-        <!-- Button: GO TO THE TOP -->
-        <div id="lastButton">
-            <button onclick="topFunction()" id="top">BACK TO THE TOP</button>
-        </div>          
+    <div id="applicantsSection">
+        
+    </div>
+
+    <!-- Button: GO TO THE TOP -->
+    <div id="lastButton">
+        <button onclick="topFunction()" id="top">BACK TO THE TOP</button>
+    </div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
@@ -81,9 +106,9 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
     <!----------------------------------------------->
-    <!--            Our own JS files               --> 
+    <!--            Our own JS files               -->
     <!----------------------------------------------->
-    <script src="scripts/immployed_firebase_api.js"></script> 
+    <script src="scripts/immployed_firebase_api.js"></script>
     <script src="scripts/employer_specific_post.js"></script>
 
 </body>

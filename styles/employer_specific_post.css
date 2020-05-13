@@ -16,30 +16,32 @@
   font-size: 32pt;
 }
 
-#mainTitle>h3 {
+#mainTitle>* {
   font-size: 32pt;
 }
 
-#myPostings {
+#postWrapper {
+  margin: 15px;
+}
+
+#mainPost {
   display: grid;
-  grid-template-columns: repeat(1, 85vw);
+  grid-template-columns: repeat(2, 45vw);
   align-items: center;
   justify-content: center;
   grid-gap: 10px 20px;
 }
 
-#myPostings>div {
-  padding: 10px;
-  color: #F9FFFA;
-  border: 2px solid #277491;
-  background-color: #62A2BA;
+#applicantTitle {
+  text-align: center;
 }
 
-#myPostings>div>button {
-  font-size: 18pt;
-  color: #F9FFFA;
-  border: none;
-  background-color: #277491;
+#applicantTitle>*{
+  font-size: 32pt;
+}
+
+#applicantsSection {
+  background-color: rgb(168, 218, 236);;
 }
 
 #lastButton {
