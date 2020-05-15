@@ -52,6 +52,15 @@
   color: white;
 }
 
+#applyButton {
+  font-size: 26pt;
+  padding: 10px;
+  border: none;
+  border-radius: 0px;
+  background-color: #277491;
+  color: #F9FFFA;
+}
+
 .applicant {
   background-color: rgb(168, 218, 236);
 }

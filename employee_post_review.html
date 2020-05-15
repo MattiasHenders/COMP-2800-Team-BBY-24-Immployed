@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Job Posts</title>
+    <meta name="class" content="COMP 2800">
+    <meta name="team" content="24">
+    <script type="text/javascript" src="scripts/employer_homepage.js"></script>
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!------------------------------------------>
+    <!-- CSS: Bootstrap, Firebase, other API  -->
+    <!------------------------------------------>
+
+    <!-- Initialize Firebase -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon_logo.png">
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
+        <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="styles/employer_specific_post.css">
+
+</head>
+
+<body>
+    <!------------------->
+    <!--  HTML Section -->
+    <!------------------->
+
+    <!-- Header -->
+    <div class="header">
+        <h2>IMMPLOYED</h2>
+    </div>
+
+    <!-- Current User Bar -->
+    <div class="subheader">
+        <h4>EMPLOYER</h4>
+    </div>
+
+    <!-- Title -->
+    <div id="mainTitle">
+        <h3 id="postTitle"></h3>
+    </div>
+
+    <div id="postWrapper">
+        <p id="postDescription"></p>
+        <div id="mainPost">
+            <div id="location">
+                <h4 style="text-decoration: underline;">Location</h4>
+                <h5 id="postAddress"></h5>
+                <h5 id="postCity"></h5>
+                <h5 id="postProvince"></h5>
+                <h5 id="postPostalCode"></h5>
+            </div>
+            <div id="pay">
+                <h4 style="text-decoration: underline;">Pay Amount</h4>
+                <h5 id="payAmount"></h5>
+                <h4 style="text-decoration: underline;">Pay Negotiable</h4>
+                <h5 id="payNegotiable"></h5>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <button id="applyButton">APPLY</button>
+
+    <!-- Button: GO TO THE TOP -->
+    <div id="lastButton">
+        <button onclick="topFunction()" id="top">BACK TO THE TOP</button>
+    </div>
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, other API's    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <!----------------------------------------------->
+    <!--            Our own JS files               -->
+    <!----------------------------------------------->
+    <script src="scripts/immployed_firebase_api.js"></script>
+    <script src="scripts/employee_post_review.js"></script>
+
+</body>
+
+</html>
