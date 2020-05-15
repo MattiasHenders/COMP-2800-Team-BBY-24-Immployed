@@ -36,12 +36,24 @@
   text-align: center;
 }
 
-#applicantTitle>*{
+#applicantTitle>* {
   font-size: 32pt;
 }
 
 #applicantsSection {
-  background-color: rgb(168, 218, 236);;
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+  background-color: #277491;
+  margin: 5px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px 20px;
+  color: white;
+}
+
+.applicant {
+  background-color: rgb(168, 218, 236);
 }
 
 #lastButton {
