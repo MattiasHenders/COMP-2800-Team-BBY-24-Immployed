@@ -6,10 +6,46 @@ h1, h2, h3, h4, h5, h6, button{
     font-family: 'Text Me One', sans-serif;
 }
 
-.header {
+nav > button {
+    color: #F9FFFA;
+    position: relative;
+    top: 0.3em;
+}
+
+.navbar-brand > img {
+    height: 1em;
+    padding-right: 0.2em;
+    position: relative;
+    bottom: 0.1em;
+}
+
+.navbar#employeeNav {
+    font-family: 'Text Me One', sans-serif;
     background-color: #277491;
     color: #F9FFFA;
-    padding: 10px;
+}
+
+.navbar#employeeNav > a {
+    padding: 0.1em 0em 0.1em 0em;
+    font-size: 35pt;
+}
+
+li.nav-item > a{
+    color: #F9FFFA;
+    font-size: 20pt;
+}
+
+div.dropdown-menu{
+    background-color: #62A2BA;
+}
+
+div.dropdown-menu > a{
+    color: #F9FFFA;
+    font-size: 18pt;
+}
+
+div.dropdown-menu > a:hover{
+    cursor:pointer;
 }
 
 .header > *{
