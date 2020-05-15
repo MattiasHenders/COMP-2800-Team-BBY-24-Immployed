@@ -1,0 +1,47 @@
+.form-group{
+    margin-left: 1em;
+    padding-bottom: 1em;
+}
+
+label {
+    margin-right: 0.5em;
+}
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.card {
+    flex: 0 0 auto;
+    display: inline-block;
+    margin: 0.5em 0.6em 0.25em 0.6em;
+}
+
+@media only screen and (min-width: 645px) {
+    .card {
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .card {
+        width: 90vw;
+    }
+}
+
+div#job-posts{
+    flex-wrap:wrap;
+}
+
+div.card-header > p {
+    margin-bottom: 0;
+}
+
+img.cardimg {
+    width: 4em;
+}
+
+#sticky-footer{
+    padding: 2em;
+}
