@@ -4,6 +4,17 @@ window.onload = function () {
     document.getElementById("myPostsButton").onclick = postsButton;
 }
 
+// Scroll to the top feature
+//mybutton = document.getElementById("top");
+window.onload = function() {
+    document.getElementById("employerProfileButton").onclick = employerProfilePage;
+
+    firebase.auth().onAuthStateChanged((user) => {
+
+            console.log(user.uid);
+    });
+};
+
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 10) {
         mybutton.style.display = "block";
@@ -24,4 +35,17 @@ function createNew() {
 
 function postsButton() {
     window.location.href = "employer_all_posts.html";
+}
+/**
+ * Change to employer profile page
+ */
+function employerProfilePage() {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            window.location.href = "employer_profile.html#" + user.uid;
+            console.log(user.uid);
+        } else {
+            console.log("Error, not logged in");
+        }
+    });
 }

@@ -1,0 +1,75 @@
+#logoPic {
+    border-radius: 50%;
+}
+
+p, span {
+    display: inline;
+}
+
+span{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: right;
+}
+
+.textBox {
+    flex-wrap: wrap;
+    display: block;
+    width: 80vw;
+    margin: 1em 10vw 2em 10vw;
+    padding: 0;
+}
+
+.editing {
+    background-color: lightcyan;
+}
+
+#editProfile {
+    padding-left: 1em;
+    flex-wrap: wrap;
+    float:right;
+    height: 4em;
+    border-radius: 0 0 0 100px;
+}
+
+#saveChanges{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #277491;
+   color: white;
+   text-align: center;
+   height: 2em;
+   font-size: 2em;
+}
+
+#success-alert{
+    position: fixed;
+    left: 0;
+    bottom: 3em;
+    width: 100%;
+}
+
+label {
+    position: relative;
+    margin-left: 6%;
+    font-size: 1.2em;
+}
+
+#profileComponents > h2{
+    position: relative;
+    margin-left: 4%;
+    border-bottom: 2px solid #277491;
+    width: 5em;
+}
+
+#logoPic {
+    display: block;
+    margin: 5em auto 2em auto;
+    float: none;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+}
