@@ -1,14 +1,8 @@
-window.onload = function () {
+window.onload = function() {
+    document.getElementById("employerProfileButton").onclick = employerProfilePage;
     // Scroll to the top feature
     mybutton = document.getElementById("top");
     document.getElementById("myPostsButton").onclick = postsButton;
-}
-
-// Scroll to the top feature
-//mybutton = document.getElementById("top");
-window.onload = function() {
-    document.getElementById("employerProfileButton").onclick = employerProfilePage;
-
     firebase.auth().onAuthStateChanged((user) => {
 
             console.log(user.uid);
