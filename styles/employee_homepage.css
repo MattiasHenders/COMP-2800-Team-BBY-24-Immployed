@@ -1,0 +1,222 @@
+#mainTitle {
+    background-color: #D6F4FF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#mainTitle>* {
+    font-size: 28pt;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.easter {
+    display:inline-block;
+    font-family: inherit;
+    text-decoration: none;
+    border: 0;
+    padding: 0;
+}
+
+#recentPostings {
+    display: block;
+    padding: 10px;
+    margin: 40px;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: #277491;
+}
+
+#paragraph0 {
+    float: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    grid-area: p0;
+    font-size: 9px;
+}
+
+#paragraph1 {
+    float: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    grid-area: p1;
+    font-size: 9px;
+}
+
+#paragraph2 {
+    float: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    grid-area: p2;
+    font-size: 9px;
+}
+
+#img {
+    grid-area: i;
+    width: 50px;
+}
+
+#title {
+    margin-top: -10px;
+    font-size: 10px;
+    margin-left:10px;
+    grid-area: t;
+}
+
+#description {
+    float: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    font-size: 9px;
+    grid-area: d;
+}
+
+#address {
+    float: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    font-size: 9px;
+    grid-area: a;
+}
+
+#payamount {
+    float: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    font-size: 9px;
+    grid-area: p;
+}
+
+#postingOne {
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    grid-template-areas:
+        "i t  t"
+        "i p0 d"
+        "i p1 a"
+        "i p2 p";
+    background-color: #277491;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: -10px;
+    color: white;
+
+}
+
+#postingTwo {
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    grid-template-areas:
+        "i t  t"
+        "i p0 d"
+        "i p1 a"
+        "i p2 p";
+    background-color: #277491;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: -10px;
+    color: white;
+}
+
+#postingThree {
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    grid-template-areas:
+        "i t  t"
+        "i p0 d"
+        "i p1 a"
+        "i p2 p";
+    background-color: #277491;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: -10px;
+    color: white;
+}
+
+#postingFour {
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    grid-template-areas:
+        "i t  t"
+        "i p0 d"
+        "i p1 a"
+        "i p2 p";
+    background-color: #277491;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: -10px;
+    color: white;
+}
+
+#pageButtons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#pageButtons>* {
+    font-size: 20pt;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #277491;
+    color: #F9FFFA;
+}
+
+#graph {
+    text-align: center;
+    padding: 10px;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {}
