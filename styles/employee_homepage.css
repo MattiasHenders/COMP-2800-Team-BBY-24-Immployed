@@ -21,6 +21,20 @@ textarea {
     padding: 0;
 }
 
+.animate {
+    animation: myfirst 5s;
+}
+@keyframes myfirst {
+    0% {background: white;
+        transform: rotateZ(0);}
+   20% {background: blue;}
+   40% {background: yellow;}
+   60% {background: red;}
+   80% {background: purple;}
+  100% {background: green;
+        transform: rotateZ(360deg)}
+  }
+
 #recentPostings {
     display: block;
     padding: 10px;

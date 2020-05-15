@@ -6,8 +6,6 @@
     <title>Home Page</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
-    <script type="text/javascript" src="scripts/employee_homepage.js"></script>
-    <script type="text/javascript" src="scripts/immployed_firebase_api.js"></script>
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
@@ -17,10 +15,6 @@
     <!------------------------------------------>
     <!-- CSS: Bootstrap, Firebase, other API  -->
     <!------------------------------------------>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="//firebase/7.14.2/firebase-app.js"></script>
-
-    <!-- Initialize Firebase -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -28,12 +22,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
     <link rel="icon"  type="image/png" href="images/favicon_logo.png">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-    
+
+    <!------------------------------------------>
+    <!--           Bootstrap Icons            -->
+    <!------------------------------------------>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+    crossorigin="anonymous">
+
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
     <link rel="stylesheet" href="styles/employee_homepage.css">
+
+    <!------------>
+    <!-- jQuery -->
+    <!------------>
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'></script>
 
 </head>
 
@@ -79,7 +85,7 @@
 
     <!-- Current User Bar -->
     <div class="subheader">
-        <p>EMPL<span onclick="easterEgg()" type="button" id="easter">O</span>YEE</p>
+        <p>EMPL<span type="button" id="easter">O</span>YEE</p>
     </div>
 
     <!-- Title -->
@@ -175,6 +181,8 @@
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
     <script src="scripts/navbar.js"></script> 
+    <script type="text/javascript" src="scripts/employee_homepage.js"></script>
+    <script type="text/javascript" src="scripts/immployed_firebase_api.js"></script>
 
 </body>
 
