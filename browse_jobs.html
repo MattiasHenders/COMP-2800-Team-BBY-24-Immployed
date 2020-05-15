@@ -47,17 +47,52 @@
     <!------------------->
     <!--  HTML Section -->
     <!------------------->
-    <div class="completeHeader">
-        <div class="header">
-            <h2>IMMPLOYED</h2>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg" id="employeeNav">
+
+        <!--Navbar brand-->
+        <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
+
+        <!--Collapse button-->
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
+
+        <!--Collapsible contents-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="employee_homepage.html">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="browse_jobs.html">SEARCH JOBS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">VIEW APPLICATIONS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">USER</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" onclick="myProfile()">PROFILE</a>
+                      <a class="dropdown-item" href="#">MANAGE RESUME</a>
+                      <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
+                    </div>
+                </li>
         </div>
-        <div class="subheader">
-            <h4>BROWSE AVAILABLE JOBS</h4>
-        </div>
-    </div><br>
+    </nav>
+
+    <!-- HEADINGS -->
+    <div class="subheader">
+        <h4>BROWSE AVAILABLE JOBS</h4>
+    </div>
+    <br>
     <div class="subheader">
         <h4>SORT</h4>
     </div><br>
+
+    <!-- PAGE CONTENTS-->
     <form class="form-inline">
         <div class="form-group">
             <label for="location">Location (WIP)</label>
@@ -120,6 +155,7 @@
 
     <div class = "d-flex" id="job-posts"></div>
 
+    <!--FOOTER-->
     <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
         <p>Info placeholder thing</p>
     </footer>
@@ -146,5 +182,6 @@
     <!----------------------------------------------->
     <script src="scripts/immployed_firebase_api.js"></script> 
     <script src="scripts/browse_jobs.js"></script> 
+    <script src="scripts/navbar.js"></script> 
 </body>
 </html>

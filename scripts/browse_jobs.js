@@ -36,7 +36,7 @@ function showJobs(){
             let logo = LOGOS.child(doc.data().ownerOfPost).child('logoPic.png');
             logo.getDownloadURL().then(function(url) {
                 refUrl = url;
-                jobsListing.innerHTML += '<div class="p-2"><div class="card" href = "___JOB PAGE____"' + doc.data().ownerOfPost + '">'
+                jobsListing.innerHTML += '<div class="p-2"><div class="card" href = "employee_post_review#' + doc.id + '">'
                 + '<div class="card-body card-header">'
                 + '<img src = "' + refUrl
                 + '" class="cardimg" alt="No Image">'
@@ -45,12 +45,12 @@ function showJobs(){
                 + '</div>'
                 + '<div class="card-body">'
                 + '<p class="card-text">' + doc.data().description + '</p>'
-                + '<a href="HTML/results.html#' + doc.data().ownerOfPost + '" class="btn btn-primary stretched-link">Apply</a>'
+                + '<a href="employee_post_review#' + doc.id + '" class="btn btn-primary stretched-link">Apply</a>'
                 + '</div></div></div>';
                 cardNumber++;
             }).catch(function(error) {
                 console.log('Logo image not found for ' + doc.data().ownerOfPost);
-                jobsListing.innerHTML += '<div class="p-2"><div class="card" href = "___JOB PAGE____"' + doc.data().ownerOfPost + '">'
+                jobsListing.innerHTML += '<div class="p-2"><div class="card" href = "employee_post_review#' + doc.id + '">'
                 + '<div class="card-body card-header">'
                 + '<img src = "images/briefcase.png' 
                 + '" class="cardimg" alt="No Image">'
@@ -59,7 +59,7 @@ function showJobs(){
                 + '</div>'
                 + '<div class="card-body">'
                 + '<p class="card-text">' + doc.data().description + '</p>'
-                + '<a href="HTML/results.html#' + doc.data().ownerOfPost + '" class="btn btn-primary stretched-link">Apply</a>'
+                + '<a href="employee_post_review#' + doc.id + '" class="btn btn-primary stretched-link">Apply</a>'
                 + '</div></div></div>';
                 cardNumber++;
             });  

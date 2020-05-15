@@ -42,6 +42,16 @@ img.cardimg {
     width: 4em;
 }
 
-#sticky-footer{
+#sticky-footer {
     padding: 2em;
+}
+
+.card-body > a {
+    background-color: #277491;
+}
+
+@media only screen and (min-width: 985px) {
+    .navbar-nav > li {
+        margin-left: 1em;
+    }
 }
