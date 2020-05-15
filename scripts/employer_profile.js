@@ -35,7 +35,7 @@ function populateProfile(){
     console.log(userProfilePic);
     userProfilePic.getDownloadURL().then(function(url) {
         var test = url;
-        document.querySelector('img').src = test;
+        document.querySelector('#logoPic').src = test;
     }).catch(function(error) {
         console.log('error');
     });
