@@ -105,7 +105,7 @@
                                 }
                             }).then(function () {
                                 console.log("New user added to firestore");
-                                window.location.assign("toProfiles.html");
+                                window.location.assign("employee_homepage.html");
                             })
                             .catch(function (error) {
                                 console.log("Error adding new user: " + error);
@@ -127,7 +127,7 @@
             //------------------------------------
             // ------NEED TO FIX THIS!!!!---------
             //------------------------------------
-            signInSuccessUrl: "toProfiles.html",
+            signInSuccessUrl: "employee_homepage.html",
 
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
