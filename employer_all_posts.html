@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>My Job Posts</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
     <script type="text/javascript" src="scripts/employer_homepage.js"></script>
@@ -18,7 +18,6 @@
     <!------------------------------------------>
 
     <!-- Initialize Firebase -->
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -31,7 +30,7 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="styles/employer_homepage.css">
+    <link rel="stylesheet" href="styles/employer_all_posts.css">
 
 </head>
 
@@ -56,79 +55,8 @@
     </div>
 
         <!-- Postings -->
-        <div id="recentPostings">
-
-            <!-- Posting 1 -->
-            <div id="postingOne">
-                <h4 id="title">POSTING 1</h4>
-                <!-- Image -->
-                <div id="img">
-                    <img src="https://via.placeholder.com/150" alt="Simply Easy Learning">
-                </div>
-                <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipscing elit.</p>
-            </div>
-
-            <!-- Posting 2 -->
-            <div id="postingTwo">
-                <h4 id="title">POSTING 2</h4>
-                 <!-- Image -->
-                 <div id="img">
-                    <img src="https://via.placeholder.com/150" alt="Simply Easy Learning">
-                </div>               
-                <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipscing elit.</p>
-            </div>
-
-            <!-- Posting 3 (DESKTOP ONLY) -->
-            <div id="postingThree">
-                <h4 id="title">POSTING 3</h4>
-                <!-- Image -->
-                <div id="img">
-                    <img src="https://via.placeholder.com/150" alt="Simply Easy Learning">
-                </div>
-                <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipscing elit.</p>
-            </div>
-
-            <!-- Posting 4 (DESKTOP ONLY) -->
-            <div id="postingFour">
-                <h4 id="title">POSTING 4</h4>
-                 <!-- Image -->
-                 <div id="img">
-                    <img src="https://via.placeholder.com/150" alt="Simply Easy Learning">
-                </div>               
-                <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipscing elit.</p>
-            </div>
-
-        </div>
-
-        <!-- Button: Create New -->
-        <div id="pageButtons">
-            <button onclick="createNew()" id="createNew" type="submit">CREATE NEW</button>
-        </div>
-
-        <!-- Button: CHECK POSTS -->
-        <div id="pageButtons">
-            <button id="myPostsButton">CHECK MY POSTS</button>
+        <div id="myPostings">
         </div>  
-
-        <!-- Search Analytics -->
-        <div id="mainTitle">
-            <h3>SEARCH ANALYTICS</h3>
-        </div>
-
-        <!-- Graph -->
-        <div id="graph">
-            <img id="g1" src="https://via.placeholder.com/300" alt="Simply Easy Learning">
-        </div>
-
-        <!-- Graph (DESKTOP ONLY) -->
-        <div id="graphOne">
-            <img id="g2" src="https://via.placeholder.com/1000x300" alt="Simply Easy Learning">
-        </div>
-
-        <!-- Button: EDIT PROFILE -->
-        <div id="pageButtons">
-            <button type="submit">EDIT EMPLOYER PROFILE</button>
-        </div>     
         
         <!-- Button: GO TO THE TOP -->
         <div id="lastButton">
@@ -136,7 +64,7 @@
         </div>          
 
     <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, other API's    -->
+    <!--    JS: Boostrap, Firebase, other API's    -->
     <!----------------------------------------------->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -147,17 +75,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
     <!----------------------------------------------->
-    <!-- JS files: Your own JavaScripts go here    -->
+    <!--            Our own JS files               --> 
     <!----------------------------------------------->
-    <script src="scripts/immployed_firebase_api.js"></script>
-    <script src="scripts/employer_homepage.js"></script>
+    <script src="scripts/immployed_firebase_api.js"></script> 
+    <script src="scripts/employer_all_posts.js"></script>
 
 </body>
 

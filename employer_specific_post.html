@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Employee Profile</title>
+    <title>My Job Posts</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
+    <script type="text/javascript" src="scripts/employer_homepage.js"></script>
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
@@ -15,6 +16,8 @@
     <!------------------------------------------>
     <!-- CSS: Bootstrap, Firebase, other API  -->
     <!------------------------------------------>
+
+    <!-- Initialize Firebase -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -22,22 +25,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon_logo.png">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-        <!------------------------------------------>
-    <!--           Bootstrap Icons            -->
-    <!------------------------------------------>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-    <!------------------------>
+        <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="styles/employee_profile.css">
-
-    <!------------>
-    <!-- jQuery -->
-    <!------------>
-    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'></script>
+    <link rel="stylesheet" href="styles/employer_specific_post.css">
 
 </head>
 
@@ -46,79 +38,53 @@
     <!--  HTML Section -->
     <!------------------->
 
-    <div class="completeHeader">
-        <div class="header">
-            <h2>IMMPLOYED</h2>
-        </div>
-        <div class="subheader">
-            <h4>PROFILE</h4>
-        </div>
+    <!-- Header -->
+    <div class="header">
+        <h2>IMMPLOYED</h2>
     </div>
 
-    <button id="editProfile">Click to Edit</button>
+    <!-- Current User Bar -->
+    <div class="subheader">
+        <h4>EMPLOYER</h4>
+    </div>
 
-    <div id="profileComponents">
-        <!-- Picture of Profile-->
-        <img id="profilePic" class="avatar">
+    <!-- Title -->
+    <div id="mainTitle">
+        <h3 id="postTitle"></h3>
+    </div>
 
-        <!-- Input for new profile picture -->
-        <form>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="fileSelect" accept="image/*" />
-                <label class="custom-file-label" for="customFile">Choose file</label>
+    <div id="postWrapper">
+        <p id="postDescription"></p>
+        <div id="mainPost">
+            <div id="location">
+                <h4 style="text-decoration: underline;">Location</h4>
+                <h5 id="postAddress"></h5>
+                <h5 id="postCity"></h5>
+                <h5 id="postProvince"></h5>
+                <h5 id="postPostalCode"></h5>
             </div>
-        </form>
-
-        <!-- Name of Profile -->
-        <div id="name">
-            <h2></h2>
+            <div id="pay">
+                <h4 style="text-decoration: underline;">Pay Amount</h4>
+                <h5 id="payAmount"></h5>
+                <h4 style="text-decoration: underline;">Pay Negotiable</h4>
+                <h5 id="payNegotiable"></h5>
+            </div>
         </div>
-
-        <div class="textBox">
-            <p id="intro"></p>
-        </div>
-
-        <h2>Experience</h2>
-        <div class="textBox">
-            <p id="experience"></p>
-        </div>
-
-        <h2>Skills</h2>
-        <div class="textBox">
-            <p id="skills"></p>
-        </div>
-
-        <h2>Interests</h2>
-        <div class="textBox">
-            <p id="interests"></p>
-        </div>
-
-        <h2>Contacts</h2>
-        <label>Email</label>
-        <div class="textBox">
-            <p id="email"></p>
-        </div> <br>
-
-        <label>Website</label>
-        <div class="textBox">
-            <p id="website"></p>
-        </div> <br>
-
-        <label>Phone</label>
-        <div class="textBox">
-            <p id="phone"></p>
-        </div><br>
-
-        <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-            <p>info placeholder thing</p>
-        </footer>
-        <button id="saveChanges">Save Changes</button>
     </div>
 
-    <div class="alert alert-success" id="success-alert">
-        <button type="button" class="close" data-dismiss="alert">x</button>
-        <strong>Success!</strong>
-        Changes saved.
+    <hr>
+    <!-- Users who've applied go below -->
+    <div id="applicantTitle">
+        <h2>Applicants</h2>
+    </div>
+
+    <div id="applicantsSection">
+        
+    </div>
+
+    <!-- Button: GO TO THE TOP -->
+    <div id="lastButton">
+        <button onclick="topFunction()" id="top">BACK TO THE TOP</button>
     </div>
 
     <!----------------------------------------------->
@@ -133,16 +99,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
     <!----------------------------------------------->
-    <!-- JS files: Your own JavaScripts go here    -->
+    <!--            Our own JS files               -->
     <!----------------------------------------------->
     <script src="scripts/immployed_firebase_api.js"></script>
-    <script src="scripts/employee_profile.js"></script>
+    <script src="scripts/employer_specific_post.js"></script>
 
 </body>
+
+</html>

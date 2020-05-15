@@ -1,0 +1,131 @@
+#recentPostings {
+  padding: 10px;
+  margin: 20px;
+}
+
+#paragraph {
+  margin-left: 10px;
+}
+
+#title {
+  margin-left: 10px;
+}
+
+#mainTitle {
+  margin: 20px;
+  font-size: 32pt;
+}
+
+#mainTitle>* {
+  font-size: 32pt;
+}
+
+#postWrapper {
+  margin: 15px;
+}
+
+#mainPost {
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px 20px;
+}
+
+#applicantTitle {
+  text-align: center;
+}
+
+#applicantTitle>* {
+  font-size: 32pt;
+}
+
+#applicantsSection {
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+  background-color: #277491;
+  margin: 5px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px 20px;
+  color: white;
+}
+
+.applicant {
+  background-color: rgb(168, 218, 236);
+}
+
+#lastButton {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#lastButton>* {
+  font-size: 26pt;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 0px;
+  background-color: #277491;
+  color: #F9FFFA;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+  #myPostings {
+    grid-template-columns: repeat(4, 22vw);
+  }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #myPostings {
+    grid-template-columns: repeat(4, 22vw);
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #myPostings {
+    grid-template-columns: repeat(2, 45vw);
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #myPostings {
+    grid-template-columns: repeat(2, 45vw);
+  }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  #myPostings {
+    grid-template-columns: repeat(2, 45vw);
+  }
+}
