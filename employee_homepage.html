@@ -42,10 +42,40 @@
     <!--  HTML Section -->
     <!------------------->
 
-    <!-- Header -->
-    <div class="header">
-        <h2>IMMPLOYED</h2>
-    </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg" id="employeeNav">
+
+        <!--Navbar brand-->
+        <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
+
+        <!--Collapse button-->
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
+
+        <!--Collapsible contents-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="employee_homepage.html">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="browse_jobs.html">SEARCH JOBS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">VIEW APPLICATIONS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">USER</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" onclick="myEmployeeProfile()">PROFILE</a>
+                      <a class="dropdown-item" href="#">MANAGE RESUME</a>
+                      <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
+                    </div>
+                </li>
+        </div>
+    </nav>
 
     <!-- Current User Bar -->
     <div class="subheader">
@@ -150,7 +180,7 @@
     <!----------------------------------------------->
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
-
+    <script src="scripts/navbar.js"></script> 
 
 </body>
 
