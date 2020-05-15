@@ -9,7 +9,6 @@ let imageUploaded = false;
 let selectedFile;
 
 let logoPic = document.getElementById("logoPic");
-let bio = document.getElementById("intro");
 let exp = document.getElementById("description");
 let email =  document.getElementById("email");
 let website =  document.getElementById("website");
@@ -43,7 +42,6 @@ function populateProfile(){
     profile.get().then(function(doc) {
         profileMap = (doc.data().profile_info)
 
-        bio.innerHTML = profileMap["bio"]
         exp.innerHTML = profileMap["description"]
         email.innerHTML = profileMap["email"]
         website.innerHTML = profileMap["website"]
