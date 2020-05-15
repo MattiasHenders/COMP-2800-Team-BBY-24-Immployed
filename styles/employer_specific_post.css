@@ -52,6 +52,11 @@
   color: white;
 }
 
+#applyButtonWrapper {
+  margin: auto;
+  text-align: center;
+}
+
 #applyButton {
   font-size: 26pt;
   padding: 10px;
