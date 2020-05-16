@@ -18,6 +18,15 @@ button {
     margin: 0.5em 0.6em 0.25em 0.6em;
 }
 
+#searchSubmitButton {
+    font-size: 12pt;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #277491;
+    color: #F9FFFA;
+}
+
 @media only screen and (min-width: 645px) {
     .card {
         width: 45vw;
