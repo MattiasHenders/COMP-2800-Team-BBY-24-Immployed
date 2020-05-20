@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta name="viewport" charset="utf-8" content="width=device-width">
     <title>My Job Posts</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
@@ -25,7 +25,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon_logo.png">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-        <!------------------------>
+
+    <!-- Here Map Default Styling -->
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+
+    <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
@@ -102,11 +106,12 @@
         </div>
     </div>
 
-    <hr>
+    <div id="mapContainer"></div>
+
     <div id="applyButtonWrapper">
         <button id="applyButton">APPLY</button>
     </div>
-
+    
     <!-- Button: GO TO THE TOP -->
     <div id="lastButton">
         <button onclick="topFunction()" id="top">BACK TO THE TOP</button>
@@ -129,6 +134,13 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <!-- Here Map API -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script src="scripts/map.js" type="text/javascript" charset="utf-8"></script>
 
     <!----------------------------------------------->
     <!--            Our own JS files               -->

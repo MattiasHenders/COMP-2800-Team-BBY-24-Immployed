@@ -18,7 +18,7 @@ window.onload = function () {
         document.getElementById("postCity").innerHTML = doc.data().city;
         document.getElementById("postProvince").innerHTML = doc.data().province;
         document.getElementById("postPostalCode").innerHTML = doc.data().inputPostalCode;
-        document.getElementById("payAmount").innerHTML = doc.data().payAmount;
+        document.getElementById("payAmount").innerHTML = "$" + doc.data().payAmount + "/hr";
         document.getElementById("payNegotiable").innerHTML = doc.data().payNegotiable;
     });
 }

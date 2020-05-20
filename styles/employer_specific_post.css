@@ -143,3 +143,19 @@
     grid-template-columns: repeat(2, 45vw);
   }
 }
+
+#mapContainer {
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+#applyButton {
+  font-size: 20pt;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #277491;
+  color: #F9FFFA;
+}
