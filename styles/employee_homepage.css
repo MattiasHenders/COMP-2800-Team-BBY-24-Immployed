@@ -35,7 +35,7 @@ textarea {
         transform: rotateZ(360deg)}
   }
 
-#recentPostings {
+#myPostings {
     display: block;
     padding: 10px;
     margin: 40px;
@@ -44,134 +44,20 @@ textarea {
     border-color: #277491;
 }
 
-#paragraph0 {
-    float: left;
-    margin-top: -10px;
-    margin-left: 10px;
-    grid-area: p0;
-    font-size: 9px;
+#myPostings>div {
+    padding: 10px;
+    color: #F9FFFA;
+    border: 2px solid #277491;
+    background-color: #62a2ba;
 }
 
-#paragraph1 {
-    float: left;
-    margin-top: -10px;
-    margin-left: 10px;
-    grid-area: p1;
-    font-size: 9px;
-}
-
-#paragraph2 {
-    float: left;
-    margin-top: -10px;
-    margin-left: 10px;
-    grid-area: p2;
-    font-size: 9px;
-}
-
-#img {
-    grid-area: i;
-    width: 50px;
-}
-
-#title {
-    margin-top: -10px;
-    font-size: 10px;
-    margin-left:10px;
-    grid-area: t;
-}
-
-#description {
-    float: left;
-    margin-top: -10px;
-    margin-left: 10px;
-    font-size: 9px;
-    grid-area: d;
-}
-
-#address {
-    float: left;
-    margin-top: -10px;
-    margin-left: 10px;
-    font-size: 9px;
-    grid-area: a;
-}
-
-#payamount {
-    float: left;
-    margin-top: -10px;
-    margin-left: 10px;
-    font-size: 9px;
-    grid-area: p;
-}
-
-#postingOne {
-    display: grid;
-    grid-template-columns: 50px auto auto;
-    grid-template-areas:
-        "i t  t"
-        "i p0 d"
-        "i p1 a"
-        "i p2 p";
+#myPostings>div>button {
+    font-size: 18pt;
+    color: #F9FFFA;
+    border: none;
     background-color: #277491;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: -10px;
-    color: white;
+  }
 
-}
-
-#postingTwo {
-    display: grid;
-    grid-template-columns: 50px auto auto;
-    grid-template-areas:
-        "i t  t"
-        "i p0 d"
-        "i p1 a"
-        "i p2 p";
-    background-color: #277491;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: -10px;
-    color: white;
-}
-
-#postingThree {
-    display: grid;
-    grid-template-columns: 50px auto auto;
-    grid-template-areas:
-        "i t  t"
-        "i p0 d"
-        "i p1 a"
-        "i p2 p";
-    background-color: #277491;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: -10px;
-    color: white;
-}
-
-#postingFour {
-    display: grid;
-    grid-template-columns: 50px auto auto;
-    grid-template-areas:
-        "i t  t"
-        "i p0 d"
-        "i p1 a"
-        "i p2 p";
-    background-color: #277491;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: -10px;
-    color: white;
-}
 
 #pageButtons {
     margin-top: 30px;

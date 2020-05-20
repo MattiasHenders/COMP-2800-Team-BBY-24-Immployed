@@ -13,65 +13,27 @@ textarea {
     height: 100%;
 }
 
-#recentPostings {
+#myPostings {
+    display: grid;
+    grid-template-columns: repeat(1, 85vw);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px 20px;
+  }
+  
+  #myPostings>div {
     padding: 10px;
-    margin: 20px;
-}
-
-#paragraph {
-    float: left;
-    margin-left: 10px;
-    grid-area: p;
-}
-
-#img {
-    grid-area: i;
-    width: 150px;
-}
-
-#title {
-    margin-left:10px;
-    grid-area: t;
-}
-
-#postingOne {
-    display: grid;
-    grid-template-columns: 150px auto;
-    grid-template-areas:
-        "i t"
-        "i p";
+    color: #F9FFFA;
+    border: 2px solid #277491;
+    background-color: #62A2BA;
+  }
+  
+  #myPostings>div>button {
+    font-size: 18pt;
+    color: #F9FFFA;
+    border: none;
     background-color: #277491;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-
-}
-
-#postingTwo {
-    display: grid;
-    grid-template-columns: 150px auto;
-    grid-template-areas:
-        "i t"
-        "i p";
-    background-color: #277491;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-}
-
-#postingThree {
-    display: none;
-}
-
-#postingFour {
-    display: none;
-}
+  }
 
 #pageButtons {
     margin-top: 30px;
@@ -122,82 +84,9 @@ textarea {
 
 @media (min-width: 1281px) {
 
-    #recentPostings {
+    #myPostings {
         display: grid;
-        grid-template-areas: 
-            "p1 p2"
-            "p3 p4";
-
     } 
-
-    #postingOne {
-        display: grid;
-        grid-template-columns: 150px auto;
-        grid-template-areas:
-            "i t"
-            "i p";
-        background-color: #277491;
-        margin-bottom: 10px;
-        margin-right: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: white;
-        grid-area: p1;
-    }
-    
-    #postingTwo {
-        display: grid;
-        grid-template-columns: 150px auto;
-        grid-template-areas:
-            "i t"
-            "i p";
-        background-color: #277491;
-        margin-bottom: 10px;
-        margin-left: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: white;
-        grid-area: p2;
-
-    }
-    
-    #postingThree {
-        display: grid;
-        grid-template-columns: 150px auto;
-        grid-template-areas:
-            "i t"
-            "i p";
-        background-color: #277491;
-        margin-bottom: 10px;
-        margin-right: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: white;
-        grid-area: p3;
-    }
-    
-    #postingFour {
-        display: grid;
-        grid-template-columns: 150px auto;
-        grid-template-areas:
-            "i t"
-            "i p";
-        background-color: #277491;
-        margin-bottom: 10px;
-        margin-left: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: white;
-        grid-area: p4;
-    }
 
     #pageButtons {
         margin-top: 30px;
