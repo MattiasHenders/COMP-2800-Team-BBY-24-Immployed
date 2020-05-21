@@ -23,8 +23,6 @@ function loadMap(address) {
 
     // Create the default UI components
     var ui = H.ui.UI.createDefault(map, defaultLayers);
-
-    console.log(address);
     
     service.geocode({
         q: address

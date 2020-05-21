@@ -20,7 +20,7 @@
     margin-bottom: 10px;
 }
 
-#titleReview, #addressReview, #cityReview, #provinceReview, #postalCodeReview, #payReview, #payNegotiableReview, #descriptionReview {
+#titleReview, #addressReview, #cityReview, #provinceReview, #postalCodeReview, #payReview, #payNegotiableReview, #descriptionReview, #tagList{
     background-color: #B8D1DF;
     padding: 8px;
     color: #20124D;
