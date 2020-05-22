@@ -22,10 +22,9 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
-    <link rel="icon"  type="image/png" href="images/favicon_logo.png">
+    <link rel="icon" type="image/png" href="images/favicon_logo.png">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-    
-    <!------------------------>
+        <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
@@ -41,37 +40,38 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg" id="employeeNav">
 
-            <!--Navbar brand-->
-            <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
-    
-            <!--Collapse button-->
-            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-            class="fas fa-bars fa-1x"></i></span></button>
-    
-            <!--Collapsible contents-->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="employee_homepage.html">HOME <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="browse_jobs.html">SEARCH JOBS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">VIEW APPLICATIONS</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">USER</a>
-                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" onclick="myEmployeeProfile()">PROFILE</a>
-                          <a class="dropdown-item" href="#">MANAGE RESUME</a>
-                          <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
-                        </div>
-                    </li>
-            </div>
-        </nav>
+        <!--Navbar brand-->
+        <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
+
+        <!--Collapse button-->
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                    class="fas fa-bars fa-1x"></i></span></button>
+
+        <!--Collapsible contents-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="employee_homepage.html">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="browse_jobs.html">SEARCH JOBS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="messaging.html">MESSAGING</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">USER</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" onclick="myEmployeeProfile()">PROFILE</a>
+                        <a class="dropdown-item" href="resume_upload.html">UPLOAD RESUME</a>
+                        <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
+                    </div>
+                </li>
+        </div>
+    </nav>
 
     <!-- Current User Bar -->
     <div class="subheader">
@@ -83,24 +83,24 @@
         <h3>UPLOAD YOUR RESUME</h3>
     </div>
 
-        <label class="upload-group">
-            CHOOSE FILE
-            <input type="file" class="upload-group" id="file">
-        </label>
-        <div id="viewResume">
-                <button type="button" id="viewButton" onclick="view()">VIEW FILE</button>
-        </div>
-        <div id="pageButtons">
-            <button type="button" id="uploadButton" onclick="upload()">SAVE</button>
-        </div>
-        
+    <label class="upload-group">
+        CHOOSE FILE
+        <input type="file" class="upload-group" id="file">
+    </label>
+    <div id="viewResume">
+        <button type="button" id="viewButton" onclick="view()">VIEW FILE</button>
+    </div>
+    <div id="pageButtons">
+        <button type="button" id="uploadButton" onclick="upload()">SAVE</button>
+    </div>
 
-        <!-- Disclaimer -->
-        <div id="disclaimer">
-            <p id="disc">
-                Your privacy and safety is our top priority therefore our app ensures that your resume stays confidential.
-            </p>
-        </div>        
+
+    <!-- Disclaimer -->
+    <div id="disclaimer">
+        <p id="disc">
+            Your privacy and safety is our top priority therefore our app ensures that your resume stays confidential.
+        </p>
+    </div>
     <!-- Footer -->
     <footer class="page-footer font-small blue">
         <!-- Footer Links -->
@@ -117,19 +117,27 @@
                 <hr class="clearfix w-100 d-md-none pb-3">
                 <!-- Grid column -->
                 <div class="col-md-3 mb-md-0 mb-3">
-                <!-- Links -->
+                    <!-- Links -->
                     <h5 class="text-uppercase">Social Media</h5>
                     <ul class="list-unstyled">
                         <li>
                             <!-- Load Facebook SDK for JavaScript -->
                             <div id="fb-root"></div>
-                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
+                            <script async defer crossorigin="anonymous"
+                                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
                             <!-- Facebook -->
-                            <img id="fb-icon" src="images/icons8-facebook-100.png"><div class="fb-like" data-href="https://www.facebook.com/Imm-Ployed-108851817506250/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="false"></div>
+                            <img id="fb-icon" src="images/icons8-facebook-100.png">
+                            <div class="fb-like" data-href="https://www.facebook.com/Imm-Ployed-108851817506250/"
+                                data-width="" data-layout="button" data-action="like" data-size="large"
+                                data-share="false"></div>
                         </li><br>
                         <li>
-                        <!-- Twitter -->
-                        <img id="twitter-icon" src="images/icons8-twitter-100.png"><a href="https://twitter.com/intent/tweet?button_hashtag=immployed&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-show-count="false">Tweet #immployed</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <!-- Twitter -->
+                            <img id="twitter-icon" src="images/icons8-twitter-100.png"><a
+                                href="https://twitter.com/intent/tweet?button_hashtag=immployed&ref_src=twsrc%5Etfw"
+                                class="twitter-hashtag-button" data-size="large" data-show-count="false">Tweet
+                                #immployed</a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </li>
                         <li>
                     </ul>
@@ -160,12 +168,12 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
     <!----------------------------------------------->
-    <!--            Our own JS files               --> 
+    <!--            Our own JS files               -->
     <!----------------------------------------------->
     <script type="text/javascript" src="scripts/resume_upload.js"></script>
-    <script src="scripts/immployed_firebase_api.js"></script> 
-    <script src="scripts/navbar.js"></script> 
-    
+    <script src="scripts/immployed_firebase_api.js"></script>
+    <script src="scripts/navbar.js"></script>
+
 </body>
 
 </html>
