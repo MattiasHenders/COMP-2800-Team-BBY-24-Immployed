@@ -65,3 +65,23 @@ div.dropdown-menu > a:hover{
     font-size: 22pt;
     margin: auto;
 }
+
+/* Footer menu */
+.page-footer {
+    padding: 2em;
+    background-color: #277491;
+    color: white;
+    margin-top: 6em;
+}
+
+#twitter-icon, #fb-icon {
+    width: 4em;
+}
+
+.twitter-hashtag-button {
+    size: 12em;
+}
+
+#footer-title {
+    font-weight: bold;
+}

@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!------------------->
     <!--  HTML Section -->
     <!------------------->
@@ -130,7 +130,46 @@
         <button id="backButton">BACK</button>
         <button id="submitButton" type="submit">SUBMIT</button>
     </div>
-
+    <!-- Footer -->
+    <footer class="page-footer font-small blue sticky-footer">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 id="footer-title" class="text-uppercase">Immployed</h5>
+                    <p>Revitalizing the Canadian economy.</p>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+                <!-- Links -->
+                    <h5 class="text-uppercase">Social Media</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <!-- Load Facebook SDK for JavaScript -->
+                            <div id="fb-root"></div>
+                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
+                            <!-- Facebook -->
+                            <img id="fb-icon" src="images/icons8-facebook-100.png"><div class="fb-like" data-href="https://www.facebook.com/Imm-Ployed-108851817506250/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="false"></div>
+                        </li><br>
+                        <li>
+                        <!-- Twitter -->
+                        <img id="twitter-icon" src="images/icons8-twitter-100.png"><a href="https://twitter.com/intent/tweet?button_hashtag=immployed&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-show-count="false">Tweet #immployed</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </li>
+                        <li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">Social Media Icons:
+            <a href="https://icons8.com"> https://icons8.com</a>
+        </div>
+    </footer>
     <!----------------------------------------------->
     <!--    JS: Boostrap, Firebase, other API's    -->
     <!----------------------------------------------->

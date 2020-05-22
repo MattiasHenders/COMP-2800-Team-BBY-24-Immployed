@@ -51,10 +51,6 @@ img.cardimg {
     width: 4em;
 }
 
-#sticky-footer {
-    padding: 2em;
-}
-
 .card-body > a {
     background-color: #277491;
 }

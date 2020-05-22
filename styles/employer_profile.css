@@ -73,3 +73,7 @@ label {
     height: 12em;
     border-radius: 50%;
 }
+
+#saveChanges, .alert{
+    z-index: 2;
+}
