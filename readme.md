@@ -68,6 +68,7 @@ Content of the project folder:
 
 2. Navigate to the directory on console, then install firebase-tools and Firebase login by entering:
     >npm -g install firebase-tools
+    >
     >firebase login
 
 3. API keys for Firebase Database and Here Maps are listed in-file. For access to the database, including editing permission, privary rule changes, etc., please [email](#teaminformation) an existing team member.
