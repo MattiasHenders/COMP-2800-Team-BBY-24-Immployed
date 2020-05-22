@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>Upload Doctor's Note</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
 
@@ -15,6 +15,8 @@
     <!------------------------------------------>
     <!-- CSS: Bootstrap, Firebase, other API  -->
     <!------------------------------------------>
+
+    <!-- Initialize Firebase -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -22,24 +24,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
     <link rel="icon"  type="image/png" href="images/favicon_logo.png">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-
-    <!------------------------------------------>
-    <!--           Bootstrap Icons            -->
-    <!------------------------------------------>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
-    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
-    crossorigin="anonymous">
-
+    
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="styles/employee_homepage.css">
-
-    <!------------>
-    <!-- jQuery -->
-    <!------------>
-    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'></script>
+    <link rel="stylesheet" href="styles/doctors_note.css">
 
 </head>
 
@@ -51,68 +41,67 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg" id="employeeNav">
 
-        <!--Navbar brand-->
-        <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
-
-        <!--Collapse button-->
-        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
-
-        <!--Collapsible contents-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="employee_homepage.html">HOME <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="browse_jobs.html">SEARCH JOBS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">VIEW APPLICATIONS</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">USER</a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" onclick="myEmployeeProfile()">PROFILE</a>
-                      <a class="dropdown-item" href="#">MANAGE RESUME</a>
-                      <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
-                    </div>
-                </li>
-        </div>
-    </nav>
+            <!--Navbar brand-->
+            <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
+    
+            <!--Collapse button-->
+            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+            class="fas fa-bars fa-1x"></i></span></button>
+    
+            <!--Collapsible contents-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="employee_homepage.html">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="browse_jobs.html">SEARCH JOBS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">VIEW APPLICATIONS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">USER</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" onclick="myEmployeeProfile()">PROFILE</a>
+                          <a class="dropdown-item" href="#">MANAGE RESUME</a>
+                          <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
+                        </div>
+                    </li>
+            </div>
+        </nav>
 
     <!-- Current User Bar -->
     <div class="subheader">
-        <p>EMPL<span type="button" id="easter">O</span>YEE</p>
+        <h4>EMPLOYEE</h4>
     </div>
 
     <!-- Title -->
     <div id="mainTitle">
-        <h3>RECENT JOB POSTINGS</h3>
+        <h3>UPLOAD YOUR NOTE</h3>
     </div>
 
-        <!-- Postings -->
-        <div id="myPostings">
-
+        <label class="upload-group">
+            CHOOSE FILE
+            <input type="file" class="upload-group" id="file">
+        </label>
+        <div id="viewResume">
+                <button type="button" id="viewButton" onclick="view()">VIEW FILE</button>
         </div>
-
-        <!-- Button: Search for a Job -->
         <div id="pageButtons">
-            <button onclick="search()" id="createNew" type="submit">SEARCH FOR A JOB</button>
-        </div>
-
-        <!-- Button: Edit Profile -->
-        <div id="pageButtons">
-            <button onclick="editProfile()" id="editProfile" type="submit">EDIT PROFILE</button>
+            <button type="button" id="uploadButton" onclick="upload()">SAVE</button>
         </div>
         
-        <div id="spacing">
-            <br>
-        </div>
-
-    <!-- Footer -->
+        <!-- Disclaimer -->
+        <div id="disclaimer">
+            <p id="disc">
+                Your privacy and safety is our top priority therefore our app ensures that your doctor's note stays confidential.
+            </p>
+        </div>        
+    
+        <!-- Footer -->
     <footer class="page-footer font-small blue">
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
@@ -154,7 +143,7 @@
         </div>
     </footer>
     <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, other API's    -->
+    <!--    JS: Boostrap, Firebase, other API's    -->
     <!----------------------------------------------->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -165,19 +154,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
     <!----------------------------------------------->
-    <!-- JS files: Your own JavaScripts go here    -->
+    <!--            Our own JS files               --> 
     <!----------------------------------------------->
+    <script type="text/javascript" src="scripts/doctors_note.js"></script>
+    <script src="scripts/immployed_firebase_api.js"></script> 
     <script src="scripts/navbar.js"></script> 
-    <script type="text/javascript" src="scripts/employee_homepage.js"></script>
-    <script type="text/javascript" src="scripts/immployed_firebase_api.js"></script>
-
+    
 </body>
 
 </html>

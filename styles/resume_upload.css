@@ -1,0 +1,225 @@
+#mainTitle {
+    background-color: #D6F4FF;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 170px;
+}
+
+#mainTitle>* {
+    font-size: 28pt;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+}
+
+#disclaimer {
+    text-align: center;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+#disc {
+    color: red;
+    margin: 7px;
+}
+
+#pageButtons {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#pageButtons>* {
+    font-size: 20pt;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #277491;
+    color: #F9FFFA;
+}
+
+
+.upload-group {
+    text-align:center;
+    display: block;
+    font-size: 20pt;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    background-color: #277491;
+    color: white;
+    border-radius: 8px;
+    font-family: 'Text Me One', sans-serif;
+}
+
+#viewResume {
+    text-align:center;
+    display: block;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    background-color: #277491;
+    border-radius: 8px;
+}
+
+#viewResume>* {
+    font-size: 20pt;
+    border: none;
+    border-radius: 8px;
+    background-color: #277491;
+    color: #F9FFFA;
+}
+
+
+input#file {
+    width: 0.1px;
+    height: 0.1px;
+    display: absolute;
+    z-index: -1;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    .upload-group {
+        text-align:center;
+        display: block;
+        font-size: 20pt;
+        margin-left: 40vw;
+        margin-right: 40vw;
+        background-color: #277491;
+        color: white;
+        border-radius: 8px;
+        font-family: 'Text Me One', sans-serif;
+    
+    }
+
+    #viewResume {
+        text-align:center;
+        display: block;
+        margin-left: 40vw;
+        margin-right: 40vw;
+        background-color: #277491;
+        border-radius: 8px;
+    }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .upload-group {
+        text-align:center;
+        display: block;
+        font-size: 20pt;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        background-color: #277491;
+        color: white;
+        border-radius: 8px;
+        font-family: 'Text Me One', sans-serif;
+    
+    }
+
+    #viewResume {
+        text-align:center;
+        display: block;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        background-color: #277491;
+        border-radius: 8px;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .upload-group {
+        text-align:center;
+        display: block;
+        font-size: 20pt;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        background-color: #277491;
+        color: white;
+        border-radius: 8px;
+        font-family: 'Text Me One', sans-serif;
+    
+    }
+
+    #viewResume {
+        text-align:center;
+        display: block;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        background-color: #277491;
+        border-radius: 8px;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .upload-group {
+        text-align:center;
+        display: block;
+        font-size: 20pt;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        background-color: #277491;
+        color: white;
+        border-radius: 8px;
+        font-family: 'Text Me One', sans-serif;
+    
+    }
+
+    #viewResume {
+        text-align:center;
+        display: block;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        background-color: #277491;
+        border-radius: 8px;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .upload-group {
+        text-align:center;
+        display: block;
+        font-size: 20pt;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        background-color: #277491;
+        color: white;
+        border-radius: 8px;
+        font-family: 'Text Me One', sans-serif;
+    
+    }
+
+    #viewResume {
+        text-align:center;
+        display: block;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        background-color: #277491;
+        border-radius: 8px;
+    }
+}

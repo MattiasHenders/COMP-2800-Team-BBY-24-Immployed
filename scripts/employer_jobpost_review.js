@@ -7,6 +7,7 @@ let inputPostalCode = localStorage.getItem(4);
 let payAmount = localStorage.getItem(5);
 let payNegotiable = localStorage.getItem(6);
 let description = localStorage.getItem(7);
+let tags = localStorage.getItem(8);
 
 let profile;
 
@@ -31,9 +32,9 @@ function setPage() {
     document.getElementById("payReview").innerHTML = payAmount;
     document.getElementById("payNegotiableReview").innerHTML = payNegotiable;
     document.getElementById("descriptionReview").innerHTML = description;
+    document.getElementById("tagList").innerHTML = tags;
     document.getElementById("backButton").onclick = jobPostPage;
     document.getElementById("submitButton").onclick = submitPost;
-
     
 }
 
@@ -57,6 +58,9 @@ function employerHomePage() {
  */
 function submitPost() {
 
+    let tagArr = tags.split(", ");
+    console.log(tagArr);
+    
     //Post to be added to job_posts collection
     db.collection("job_posts").add({
             title: title,
@@ -67,7 +71,8 @@ function submitPost() {
             payAmount: payAmount,
             payNegotiable: payNegotiable,
             description: description,
-            ownerOfPost: profile
+            ownerOfPost: profile,
+            tags: tagArr
         })
         .then(function () {
             employerHomePage();

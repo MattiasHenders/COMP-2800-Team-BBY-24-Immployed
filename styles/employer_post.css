@@ -138,3 +138,18 @@ textarea {
   */
 
 @media (min-width: 481px) and (max-width: 767px) {}
+
+.tag{
+    width: 12em;
+}
+
+.tagButton{
+    display: block;
+    font-size: 2em;
+    padding: 0 1em 0 1em;
+    margin: 0.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: #277491;
+    color: #F9FFFA;
+}

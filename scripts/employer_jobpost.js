@@ -7,6 +7,8 @@ let inputPostalCode;
 let payAmount;
 let payNegotiable;
 let description;
+let tags;
+tagNumber = 1;
 
 /**
  * Gets buttons and check if uses is coming back from review page.
@@ -50,6 +52,7 @@ function getInputData(){
     payAmount = "N/A";
     payNegotiable = "N/A";
     description = "N/A";
+    tags = "N/A";
 
     if(document.getElementById("titleInput").value != ""){
         title = document.getElementById("titleInput").value;
@@ -72,6 +75,9 @@ function getInputData(){
     if(document.getElementById("descriptionInput").value != ""){
         description = document.getElementById("descriptionInput").value;
     }
+    if(document.getElementById("tagList").value != ""){
+        tags = document.getElementById("tagList").value;
+    }
     if(document.getElementById("payNegotiableYes").checked){
         payNegotiable = "Yes";
     } else {
@@ -93,6 +99,7 @@ function sendToReview(){
     localStorage.setItem(5, payAmount);
     localStorage.setItem(6, payNegotiable);
     localStorage.setItem(7, description);
+    localStorage.setItem(8, tags);
 }
 
 /**
@@ -107,6 +114,7 @@ function loadLocalStorageInfo(){
     payAmount = localStorage.getItem(5);
     payNegotiable = localStorage.getItem(6);
     description = localStorage.getItem(7);
+    tags = localStorage.getItem(8);
 
     changeInputValues();
 }
@@ -122,6 +130,7 @@ function changeInputValues(){
     document.getElementById("inputPostalCode").value = inputPostalCode;
     document.getElementById("payAmountInput").value = payAmount;
     document.getElementById("descriptionInput").value = description;
+    document.getElementById("tagList").value = tags;
 }
 
 /**

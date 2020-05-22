@@ -57,13 +57,13 @@
   text-align: center;
 }
 
-#applyButton {
-  font-size: 26pt;
-  padding: 10px;
+#applicantResume {
+  font-size: 14pt;
+  padding: 5px;
   border: none;
-  border-radius: 0px;
-  background-color: #277491;
-  color: #F9FFFA;
+  border-radius: 5px;
+  background-color: rgb(168, 218, 236);
+  color: #277491;
 }
 
 .applicant {
@@ -142,4 +142,20 @@
   #myPostings {
     grid-template-columns: repeat(2, 45vw);
   }
+}
+
+#mapContainer {
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+#applyButton {
+  font-size: 20pt;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #277491;
+  color: #F9FFFA;
 }

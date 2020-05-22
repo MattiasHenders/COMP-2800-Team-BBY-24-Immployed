@@ -77,7 +77,7 @@ function addPostsDOM(applicantInput, i) {
     element.appendChild(tag);
 
     var tag = document.createElement("button");
-    tag.id = "applicant" + i;
+    tag.id = "applicantResume";
     tag.class = "postButton";
     var text = document.createTextNode("View Resume");
     tag.appendChild(text);

@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My Job Posts</title>
+    <title>Upload Files</title>
     <meta name="class" content="COMP 2800">
     <meta name="team" content="24">
-    <script type="text/javascript" src="scripts/employer_homepage.js"></script>
 
     <!----------------------------------------------->
     <!--  Meta tag for rendering on mobile devices -->
@@ -23,13 +22,14 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/favicon_logo.png">
+    <link rel="icon"  type="image/png" href="images/favicon_logo.png">
     <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.0.min.js'> </script>
-        <!------------------------>
+    
+    <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="styles/master.css">
-    <link rel="stylesheet" href="styles/employer_specific_post.css">
+    <link rel="stylesheet" href="styles/resume_upload.css">
 
 </head>
 
@@ -41,81 +41,66 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg" id="employeeNav">
 
-        <!--Navbar brand-->
-        <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
-
-        <!--Collapse button-->
-        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
-
-        <!--Collapsible contents-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="employer_homepage.html">HOME <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="employer_all_posts.html">MY JOB POSTINGS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="employer_jobpost.html">CREATE NEW JOB POST</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">USER</a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" onclick="myEmployerProfile()">PROFILE</a>
-                      <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
-                    </div>
-                </li>
-        </div>
-    </nav>
+            <!--Navbar brand-->
+            <a class="navbar-brand"><img src="images\imm-ployed_logo1.png">IMMPLOYED</a>
+    
+            <!--Collapse button-->
+            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+            class="fas fa-bars fa-1x"></i></span></button>
+    
+            <!--Collapsible contents-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="employee_homepage.html">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="browse_jobs.html">SEARCH JOBS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">VIEW APPLICATIONS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">USER</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" onclick="myEmployeeProfile()">PROFILE</a>
+                          <a class="dropdown-item" href="#">MANAGE RESUME</a>
+                          <a class="dropdown-item" onclick="signout()">SIGN OUT</a>
+                        </div>
+                    </li>
+            </div>
+        </nav>
 
     <!-- Current User Bar -->
     <div class="subheader">
-        <h4>EMPLOYER</h4>
+        <h4>EMPLOYEE</h4>
     </div>
 
     <!-- Title -->
     <div id="mainTitle">
-        <h3 id="postTitle"></h3>
+        <h3>UPLOAD YOUR RESUME</h3>
     </div>
 
-    <div id="postWrapper">
-        <p id="postDescription"></p>
-        <div id="mainPost">
-            <div id="location">
-                <h4 style="text-decoration: underline;">Location</h4>
-                <h5 id="postAddress"></h5>
-                <h5 id="postCity"></h5>
-                <h5 id="postProvince"></h5>
-                <h5 id="postPostalCode"></h5>
-            </div>
-            <div id="pay">
-                <h4 style="text-decoration: underline;">Pay Amount</h4>
-                <h5 id="payAmount"></h5>
-                <h4 style="text-decoration: underline;">Pay Negotiable</h4>
-                <h5 id="payNegotiable"></h5>
-            </div>
+        <label class="upload-group">
+            CHOOSE FILE
+            <input type="file" class="upload-group" id="file">
+        </label>
+        <div id="viewResume">
+                <button type="button" id="viewButton" onclick="view()">VIEW FILE</button>
         </div>
-    </div>
-
-    <hr>
-    <!-- Users who've applied go below -->
-    <div id="applicantTitle">
-        <h2>Applicants</h2>
-    </div>
-
-    <div id="applicantsSection">
+        <div id="pageButtons">
+            <button type="button" id="uploadButton" onclick="upload()">SAVE</button>
+        </div>
         
-    </div>
 
-    <!-- Button: GO TO THE TOP -->
-    <div id="lastButton">
-        <button onclick="topFunction()" id="top">BACK TO THE TOP</button>
-    </div>
-
+        <!-- Disclaimer -->
+        <div id="disclaimer">
+            <p id="disc">
+                Your privacy and safety is our top priority therefore our app ensures that your resume stays confidential.
+            </p>
+        </div>        
     <!-- Footer -->
     <footer class="page-footer font-small blue">
         <!-- Footer Links -->
@@ -157,7 +142,7 @@
         </div>
     </footer>
     <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, other API's    -->
+    <!--    JS: Boostrap, Firebase, other API's    -->
     <!----------------------------------------------->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -175,11 +160,12 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 
     <!----------------------------------------------->
-    <!--            Our own JS files               -->
+    <!--            Our own JS files               --> 
     <!----------------------------------------------->
-    <script src="scripts/immployed_firebase_api.js"></script>
-    <script src="scripts/employer_specific_post.js"></script>
+    <script type="text/javascript" src="scripts/resume_upload.js"></script>
+    <script src="scripts/immployed_firebase_api.js"></script> 
     <script src="scripts/navbar.js"></script> 
+    
 </body>
 
 </html>
