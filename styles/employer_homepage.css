@@ -68,15 +68,6 @@ textarea {
     color: #F9FFFA;
 }
 
-#graph {
-    text-align: center;
-    padding: 10px;
-}
-
-#graphOne {
-    display: none;
-}
-
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -95,19 +86,9 @@ textarea {
         justify-content: space-evenly;
     }
 
-    #graph {
-        display: none;
-    }
-
     #g2 {
         margin-top: 20px;
         grid-area: g2;
-    }
-    
-    #graphOne {
-        display: grid;
-        grid-template-areas: 
-            ". g2";
     }
 
 }
